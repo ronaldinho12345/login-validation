@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>this app has been programmed by taha</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            font-family: "josefin Sans", sans-serif;
+        }
+        
+        body {
+            background: #fece0c;
+        }
+        
+        .wrapper {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 350px;
+            width: 100%;
+            background: #fff;
+            padding: 25px;
+            border-radius: 5px;
+            box-shadow: 4px 4px 2px rgba(254, 236, 164, 1)
+        }
+        
+        .wrapper h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #332902;
+        }
+        
+        .wrapper .taha1 {
+            margin-bottom: 10px;
+        }
+        
+        .wrapper .taha2 {
+            margin-bottom: 10px;
+        }
+        
+        .wrapper.taha3 {
+            margin-bottom: 10px;
+        }
+        
+        .wrapper .taha4 {
+            margin-bottom: 10px;
+        }
+        
+        .wrapper textarea {
+            width: 100%;
+            border: 1px solid #e0e0e0;
+            padding: 10px;
+        }
+        
+        .wrapper .taha1 .taha2.taha3.taha4 input[type="text"] .wrapper .taha5 {
+            margin-bottom: 10px;
+        }
+        
+        .wrapper textarea {
+            resize: none;
+            height: 80px;
+        }
+        
+        .wrapper .tahabtn input[type="submit"] {
+            border: 0;
+            margin-top: 15px;
+            padding: 15px;
+            width: 100%;
+            background: #fece0c;
+            color: #332902;
+            font-size: 15px;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+        
+        .wrapper #error_message {
+            margin-bottom: 20px;
+            padding: 10px;
+            background: #fe8b8e;
+            text-align: center;
+            font-size: 14px;
+            transition: all 0.5s ease;
+        }
+        
+        .taha2 {
+            margin-bottom: 10px;
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <h2>contact us</h2>
+
+        <div id="error_message"></div>
+        <form action="js.html" id="my_form" onsubmit="return validation()">
+            <div class="taha1">
+                <input type="text" placeholder="name" id="name" />
+            </div>
+            <div class="taha2">
+                <input type="text" placeholder="password" id="password" />
+            </div>
+            <div class="taha3">
+                <input type="text" placeholder="phone" id="phone" />
+            </div>
+            <br>
+            <div class="taha4">
+                <input type="text" placeholder="email" id="email" />
+            </div>
+            <div class="taha5">
+                <textarea placeholder="message" id="message"></textarea>
+            </div>
+            <div class="tahabtn">
+                <input type="submit" />
+            </div>
+    </div>
+    </form>
+</body>
+<script>
+    function validation() {
+        var name = document.getElementById("name").value;
+        var password = document.getElementById("password").value;
+        var phone = document.getElementById("phone").value;
+        var email = document.getElementById("email").value;
+        var message = document.getElementById("message").value;
+        var error_message = document.getElementById("error_message")
+        error_message.style.padding = "10px";
+        if (name.length < 5) {
+            Text = "please enter a valid name"
+        } else {
+            Text = "you put a valid name"
+        }
+        if (password.length < 5) {
+            Text = "put a vaid password"
+        }
+        if (phone.length < 5) {
+            Text = 'put a valid phone'
+        }
+        if (email.length < 5) {
+            Text = 'put a valid phone'
+        }
+    }
+</script>
+
+</html>
